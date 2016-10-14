@@ -1,0 +1,34 @@
+{
+  "name": "passport-cognito",
+  "version": "0.0.1",
+  "description": "Express passport module for Cognito User Pools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kndt84/passport-cognito.git"
+  },
+  "keywords": [
+    "cognito"
+  ],
+  "author": "Takashi Kaneda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kndt84/passport-cognito/issues"
+  },
+  "homepage": "https://github.com/kndt84/passport-cognito#readme",
+  "dependencies": {
+    "amazon-cognito-identity-js": "^1.6.0",
+    "aws-sdk": "^2.6.9",
+    "dom-storage": "^2.0.2",
+    "jsbn": "^0.1.0",
+    "moment": "^2.15.1",
+    "node-jsbn": "^0.1.1",
+    "node-localstorage": "^1.3.0",
+    "passport-strategy": "^1.0.0",
+    "sjcl": "^1.0.6",
+    "util": "^0.10.3"
+  }
+}
