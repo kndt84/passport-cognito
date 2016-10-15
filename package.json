@@ -2,7 +2,7 @@
   "name": "passport-cognito",
   "version": "0.0.1",
   "description": "Express passport module for Cognito User Pools",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,10 +11,14 @@
     "url": "git+https://github.com/kndt84/passport-cognito.git"
   },
   "keywords": [
-    "cognito"
+    "passport",
+    "cognito",
+    "auth",
+    "authentication",
+    "identity",
   ],
   "author": "Takashi Kaneda",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kndt84/passport-cognito/issues"
   },
