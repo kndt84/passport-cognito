@@ -18,8 +18,9 @@ passport.use(new CognitoStrategy({
     region: 'ap-northeast-1'
   },
   function(accessToken, refreshToken, profile, cb) {
-    User.findOrCreate(..., function (err, user) {
-      cb(err, user);
+    process.nextTick(function() {
+      ...
+      cb(null, user);
     });
   }
 ));
@@ -36,7 +37,7 @@ $.ajax({
 })
 ```
 Then the strategy receive username and password as a req object. In detail, req.body.username and req.body.password should not be undefined. Then, call authenticate method as express middleware.
-```
+```javascript
 app.post('/auth/cognito',
   passport.authenticate('cognito', {
     successRedirect: '/',
