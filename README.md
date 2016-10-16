@@ -10,7 +10,7 @@ unobtrusively integrated into any application or framework that supports
 
 ## Install
 ```sh
-$ npm install passport-facebook
+$ npm install passport-cognito
 ```    
 
 ## Usage
