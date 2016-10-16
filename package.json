@@ -15,7 +15,7 @@
     "cognito",
     "auth",
     "authentication",
-    "identity",
+    "identity"
   ],
   "author": "Takashi Kaneda",
   "license": "MIT",
