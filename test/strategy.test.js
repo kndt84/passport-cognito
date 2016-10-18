@@ -35,6 +35,72 @@ describe('Strategy', function() {
     });
   })
 
+  describe('authorization request without username or password', function() {
+    var strategy = new CognitoStrategy({
+        userPoolId: 'ap-northeast-1_asdfaga',
+        clientId: '123asjdfasdfafdad',
+        region: 'ap-northeast-1'  
+      }, function() {});
+    
+    var err;
+    var code;
+
+    before(function(done) {
+      chai.passport.use(strategy)
+        .fail(function(e, c){
+          err = e;
+          code  = c;
+          done();
+        })
+        .req(function(req) {
+          req.body = {}
+        })
+        .authenticate({badRequestMessage:"hoge"});
+    });
+
+    it('should be fail', function() {
+      expect(err.message).to.equal('hoge');
+      expect(code).to.equal(400);
+    });
+  });
+
+  describe('authorization request with username and password', function() {
+    var strategy = new CognitoStrategy({
+        userPoolId: 'ap-northeast-1_asdfaga',
+        clientId: '123asjdfasdfafdad',
+        region: 'ap-northeast-1'  
+      }, function() {});
+    
+    var err;
+    var code;
+
+    before(function(done) {
+      chai.passport.use(strategy)
+        .fail(function(e, c){
+          console.log(e)
+          err = e;
+          code  = c;
+          done();
+        })
+        .req(function(req) {
+          req.body = {}
+          req.body.username = "username"
+          req.body.password = "password"
+        })
+        .authenticate();
+    });
+
+    it('should be fail', function() {
+      expect(err.message).to.equal('User pool client 123asjdfasdfafdad does not exist.');
+      expect(code).to.equal(400);
+    });
+  });
+
+
+
+
+
+
 })
 
 
