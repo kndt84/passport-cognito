@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/kndt84/passport-cognito.svg?branch=master)](https://travis-ci.org/kndt84/passport-cognito)
+[![dependencies Status](https://david-dm.org/kndt84/passport-cognito/status.svg)](https://david-dm.org/kndt84/passport-cognito)
+
+
 # passport-cognito
 
 [Passport](http://passportjs.org/) strategy for Cognito User Pools not for Cognito Identity.
