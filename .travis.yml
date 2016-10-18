@@ -4,9 +4,10 @@ node_js:
   - "6"
   - "5"
   - "4"
+before_script: 
+  - npm install -g codeclimate-test-reporter
+after_script:
+  - codeclimate-test-reporter < coverage/lcov.info
 addons:
   code_climate:
     repo_token: 1af610fa845d39e907351b88b28370257b6061ea7231974a7c20ca1491bc28e6
-after_script:
-  - istanbul cover _mocha --require test/bootstrap/node test/*.test.js
-  - codeclimate-test-reporter < coverage/lcov.info
