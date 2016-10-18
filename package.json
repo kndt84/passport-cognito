@@ -1,6 +1,6 @@
 {
   "name": "passport-cognito",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Express passport module for Cognito User Pools",
   "main": "./lib/index.js",
   "scripts": {
@@ -18,7 +18,13 @@
     "identity"
   ],
   "author": "Takashi Kaneda",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "licenses": [
+    {
+      "type": "Amazon Software License",
+      "url": "http://aws.amazon.com/asl"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/kndt84/passport-cognito/issues"
   },
