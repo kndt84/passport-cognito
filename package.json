@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/kndt84/passport-cognito#readme",
   "dependencies": {
+    "amazon-cognito-identity-js-node": "0.0.1",
     "aws-sdk": "^2.6.9",
     "jsbn": "^0.1.0",
     "moment": "^2.15.1",
