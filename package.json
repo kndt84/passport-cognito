@@ -4,13 +4,15 @@
   "description": "Express passport module for Cognito User Pools",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha --require test/bootstrap/node test/*.test.js --timeout 10000"
+    "test": "istanbul cover --report text _mocha --require test/bootstrap/node test/*.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kndt84/passport-cognito.git"
   },
   "keywords": [
+    "amazon",
+    "aws",
     "passport",
     "cognito",
     "auth",
@@ -18,7 +20,7 @@
     "identity"
   ],
   "author": "Takashi Kaneda",
-  "license": "SEE LICENSE IN LICENSE.txt",
+  "license": "Amazon Software License",
   "licenses": [
     {
       "type": "Amazon Software License",
@@ -42,6 +44,8 @@
     "assert": "^1.4.1",
     "chai": "^3.5.0",
     "chai-passport-strategy": "^1.0.0",
+    "codeclimate-test-reporter": "^0.4.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.1.2"
   }
 }
