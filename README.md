@@ -25,7 +25,7 @@ passport.use(new CognitoStrategy({
     clientId: 'vtvg02tr21zmxvspyvawtv09b',
     region: 'ap-northeast-1'
   },
-  function(accessToken, refreshToken, profile, cb) {
+  function(accessToken, idToken, refreshToken, profile, cb) {
     process.nextTick(function() {
       ...
       cb(null, user);
@@ -35,7 +35,7 @@ passport.use(new CognitoStrategy({
 ```
 
 ### Authenticate Requests
-To authenticate a user, send username and password by POST request like the following.
+To authenticate a user, send username and password to serser-side by POST request like the following.
 
 ```javascript 
 $.ajax({
