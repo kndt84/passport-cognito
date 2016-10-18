@@ -55,11 +55,11 @@ describe('Strategy', function() {
         .req(function(req) {
           req.body = {}
         })
-        .authenticate({badRequestMessage:"hoge"});
+        .authenticate();
     });
 
     it('should be fail', function() {
-      expect(err.message).to.equal('hoge');
+      expect(err.message).to.equal('Missing credentials');
       expect(code).to.equal(400);
     });
   });
@@ -77,9 +77,8 @@ describe('Strategy', function() {
     before(function(done) {
       chai.passport.use(strategy)
         .fail(function(e, c){
-          console.log(e)
           err = e;
-          code  = c;
+          statusCode = c;
           done();
         })
         .req(function(req) {
@@ -92,7 +91,7 @@ describe('Strategy', function() {
 
     it('should be fail', function() {
       expect(err.message).to.equal('User pool client 123asjdfasdfafdad does not exist.');
-      expect(code).to.equal(400);
+      expect(statusCode).to.equal(400);
     });
   });
 
