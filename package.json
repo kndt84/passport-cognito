@@ -4,7 +4,7 @@
   "description": "Express passport module for Cognito User Pools",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "istanbul cover --report text _mocha --require test/bootstrap/node test/*.test.js"
+    "test": "mocha --require test/bootstrap/node test/*.test.js"
   },
   "repository": {
     "type": "git",
