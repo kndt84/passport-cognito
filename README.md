@@ -15,7 +15,7 @@ $ npm install passport-cognito
 
 ## Usage
 
-### Confiture Strategy
+### Configure Strategy
 
 ```javascript
 var CognitoStrategy = require('passport-cognito')
