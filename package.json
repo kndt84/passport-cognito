@@ -20,13 +20,7 @@
     "identity"
   ],
   "author": "Takashi Kaneda",
-  "license": "Amazon Software License",
-  "licenses": [
-    {
-      "type": "Amazon Software License",
-      "url": "http://aws.amazon.com/asl"
-    }
-  ],
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kndt84/passport-cognito/issues"
   },
