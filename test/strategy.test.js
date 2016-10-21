@@ -78,7 +78,6 @@ describe('Strategy', function() {
       chai.passport.use(strategy)
         .fail(function(e, c){
           err = e;
-          statusCode = c;
           done();
         })
         .req(function(req) {
@@ -89,16 +88,11 @@ describe('Strategy', function() {
         .authenticate();
     });
 
-    it('should be fail', function() {
+    it('should be fail as resource not found', function() {
       expect(err.message).to.equal('User pool client 123asjdfasdfafdad does not exist.');
-      expect(statusCode).to.equal(400);
+      expect(err.statusCode).to.equal(400);
     });
   });
-
-
-
-
-
 
 })
 
