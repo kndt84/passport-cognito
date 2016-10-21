@@ -29,7 +29,7 @@ passport.use(new CognitoStrategy({
     clientId: 'vtvg02tr21zmxvspyvawtv09b',
     region: 'ap-northeast-1'
   },
-  function(accessToken, idToken, refreshToken, profile, cb) {
+  function(accessToken, idToken, refreshToken, user, cb) {
     process.nextTick(function() {
       ...
       cb(null, user);
@@ -56,3 +56,27 @@ app.post('/auth/cognito',
     failureRedirect: '/login'
 }));
 ```
+# FAQ
+
+## How to get session expiration ?
+You can get session object by adding a variable to argument vector. Then, by executing getExpiration method, session expiration is retrieved.
+
+```javascript
+var CognitoStrategy = require('passport-cognito')
+
+passport.use(new CognitoStrategy({
+    userPoolId: 'ap-northeast-1_eSjqLfqKc',
+    clientId: 'vtvg02tr21zmxvspyvawtv09b',
+    region: 'ap-northeast-1'
+  },
+  function(accessToken, idToken, refreshToken, user, session, cb) {
+    process.nextTick(function() {
+      user.expiration = session.getIdToken().getExpiration();
+      ...
+      cb(null, user);
+    });
+  }
+));
+```
+
+
