@@ -30,6 +30,7 @@ passport.use(new CognitoStrategy({
     region: 'ap-northeast-1'
   },
   function(accessToken, idToken, refreshToken, profile, cb) {
+// function(accessToken, idToken, refreshToken, profile, session, cb) { // If you need session object
     process.nextTick(function() {
       ...
       cb(null, user);
