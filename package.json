@@ -1,6 +1,6 @@
 {
   "name": "passport-cognito",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Express passport module for Cognito User Pools",
   "main": "./lib/index.js",
   "scripts": {
