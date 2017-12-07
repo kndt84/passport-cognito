@@ -42,6 +42,7 @@ passport.use(new CognitoStrategy({
 To authenticate a user, send username and password to serser-side by POST request like the following.
 
 ```javascript 
+// Browser
 $.ajax({
   type: "POST",
   url: '/auth/cognito',
@@ -50,6 +51,7 @@ $.ajax({
 ```
 Then the strategy receive username and password as a req object. In detail, req.body.username and req.body.password should not be undefined. Then, call authenticate method as express middleware.
 ```javascript
+// Server
 app.post('/auth/cognito',
   passport.authenticate('cognito', {
     successRedirect: '/',
