@@ -39,7 +39,7 @@ passport.use(new CognitoStrategy({
 ```
 
 ### Authenticate Requests
-To authenticate a user, send username and password to serser-side by POST request like the following.
+To authenticate a user, send username and password to server-side by POST request like the following.
 
 ```javascript 
 // Browser
