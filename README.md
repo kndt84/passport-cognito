@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/kndt84/passport-cognito.svg?branch=master)](https://travis-ci.org/kndt84/passport-cognito)
-[![Code Climate](https://codeclimate.com/github/kndt84/passport-cognito/badges/gpa.svg)](https://codeclimate.com/github/kndt84/passport-cognito)
 [![dependencies Status](https://david-dm.org/kndt84/passport-cognito/status.svg)](https://david-dm.org/kndt84/passport-cognito)
 
 # passport-cognito
