@@ -91,7 +91,6 @@ describe('Strategy', function() {
 
     it('should be fail as resource not found', function() {
       expect(err.message).to.equal('User pool client 123asjdfasdfafdad does not exist.');
-      console.log(err);
       expect(err.code).to.equal("ResourceNotFoundException");
     });
   });
