@@ -2,8 +2,10 @@
 /* jshint expr: true */
 global.fetch = require('node-fetch');
 var chai = require('chai');
+var expect = require('chai').expect;
 var CognitoStrategy = require('../lib/strategy');
 
+chai.use(require('@zhaow-de/chai-passport-strategy'));
 
 describe('Strategy', function() {
     
@@ -45,7 +47,6 @@ describe('Strategy', function() {
     
     var err;
     var code;
-
     before(function(done) {
       chai.passport.use(strategy)
         .fail(function(e, c){
