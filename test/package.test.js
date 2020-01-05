@@ -1,6 +1,7 @@
 /* global describe, it, expect */
 
 var strategy = require('..');
+var expect = require('chai').expect;
 
 describe('passport-cognito', function() {
     
