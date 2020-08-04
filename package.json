@@ -28,11 +28,7 @@
   "dependencies": {
     "amazon-cognito-identity-js": "3.2.1",
     "aws-sdk": "^2.597.0",
-    "jsbn": "^1.1.0",
-    "moment": "^2.24.0",
-    "node-localstorage": "^2.1.5",
     "passport-strategy": "^1.0.0",
-    "sjcl": "^1.0.8",
     "util": "^0.12.1"
   },
   "devDependencies": {
